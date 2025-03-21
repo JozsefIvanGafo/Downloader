@@ -43,12 +43,6 @@ To run the downloader directly using Python:
 python main.py
 ```
 
-If you need to specify options:
-
-```
-python main.py 
-```
-
 ## Building an Executable
 
 To create a standalone executable with the application icon:
@@ -60,7 +54,7 @@ To create a standalone executable with the application icon:
 
 2. Build the executable with the icon:
    ```
-   pyinstaller --onefile  --icon=icon.ico main.py
+   pyinstaller --onefile --name youtube-downloader --icon ".\src\icon\icon.ico" ".\src\main.py" 
    ```
 
 
