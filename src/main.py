@@ -1,7 +1,7 @@
 import yt_dlp
 import os
 import time
-import sys
+
 
 
 def get_youtube_link():
@@ -85,7 +85,11 @@ def main():
             print(f"Error during download: {str(e)}")
         
         input("Press Enter to continue...")
-        sys.clear()
+        # Clear terminal screen (cross-platform)
+        if os.name == 'nt':  # For Windows
+            os.system('cls')
+        else:  # For Unix/Linux/MacOS
+            os.system('clear')
 
         
 
